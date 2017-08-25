@@ -2,14 +2,14 @@
 * @Author: anchen
 * @Date:   2017-08-22 16:00:57
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-08-25 16:36:46
+* @Last Modified time: 2017-08-25 17:23:44
 */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router'
 import App from './modules/App';
-import 'babel-polyfill';
+import 'babel-polyfill';//跟es6结合解决360、ie等不支持es6的浏览器报symbol未定义
 
 // 增加 About 和 Repos 组件
 import About from './modules/About'
