@@ -2,12 +2,12 @@
 * @Author: anchen
 * @Date:   2017-08-22 16:00:57
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-08-25 17:23:44
+* @Last Modified time: 2017-08-28 17:23:00
 */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, browserHistory,IndexRoute } from 'react-router'
 import App from './modules/App';
 import 'babel-polyfill';//跟es6结合解决360、ie等不支持es6的浏览器报symbol未定义
 
@@ -21,7 +21,7 @@ import baobeiS from './modules/baobeiS'
 import account from './modules/account'
 
 ReactDOM.render((
-<Router history={hashHistory}>
+<Router history={browserHistory}>
   <Route path="/" component={App}>
     <Route path="/repos" component={Repos}/>
     <Route path="/nets" component={nets}/>

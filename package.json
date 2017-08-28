@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "webpack-dev-server --inline --hot --content-base .",
+    "start": "node server.js",
+    "dev": "webpack-dev-server --inline --hot --content-base public --history-api-fallback",
     "build": "cross-env NODE_ENV=production webpack -p"
   },
   "author": "",
@@ -13,7 +13,10 @@
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.1",
-    "http-proxy-middleware": "^0.17.3"
+    "http-proxy-middleware": "^0.17.3",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.9",
+    "react-router": "^2.8.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

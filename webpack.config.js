@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack')
 module.exports = {
     // 入口文件
     entry: './index.js',
@@ -54,9 +55,11 @@ module.exports = {
           { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
-      plugins: [
-
-  ]
+    //   plugins: process.env.NODE_ENV === 'production' ? [
+    //     new webpack.optimize.DedupePlugin(),
+    //     new webpack.optimize.OccurrenceOrderPlugin(),
+    //     new webpack.optimize.UglifyJsPlugin()
+    // ] : [],
 
 };
 
