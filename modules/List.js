@@ -2,13 +2,13 @@
 * @Author: anchen
 * @Date:   2017-08-23 13:44:03
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-08-25 09:18:32
+* @Last Modified time: 2017-09-07 16:22:05
 */
 import React from 'react';
 // 导入Link组件
 import { Link } from 'react-router';
 
-import './style/app.less';
+import './style/css/app.less';
 
 // import NavLink from './NavLink';
 

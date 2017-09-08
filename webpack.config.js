@@ -9,8 +9,8 @@ module.exports = {
         // filename: 'bundle.js',
         //生产环境打开
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/assets/js'),
-    publicPath: '/'
+    path: path.resolve(__dirname, 'public'),
+    // publicPath: '/'
     },
     devServer: {
         // historyApiFallback: true,
@@ -52,9 +52,20 @@ module.exports = {
             {test: /\.less$/,
              loader: 'style-loader!css-loader!less-loader'
          },
-          { test: /\.css$/, loader: 'style-loader!css-loader' }
+          { test: /\.css$/, loader: 'style-loader!css-loader' },
+          { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+           loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'},
+          { test: /\.png$/,
+           loader: "file-loader?name=images/[hash:8].[name].[ext]" }
         ]
     },
+     plugins: [
+    new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: "jquery",
+    "window.jQuery": "jquery"
+        })
+     ],
     //   plugins: process.env.NODE_ENV === 'production' ? [
     //     new webpack.optimize.DedupePlugin(),
     //     new webpack.optimize.OccurrenceOrderPlugin(),

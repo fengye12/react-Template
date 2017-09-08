@@ -2,11 +2,11 @@
 * @Author: anchen
 * @Date:   2017-08-22 15:36:00
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-08-25 16:56:52
+* @Last Modified time: 2017-09-07 16:23:39
 */
 
 import React from 'react';
-import './style/app.less';
+import './style/css/app.less';
 import 'isomorphic-fetch';
 import Promise from 'es6-promise';
 // import GetOjson from './getJson';
